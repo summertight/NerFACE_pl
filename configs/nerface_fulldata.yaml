@@ -1,0 +1,43 @@
+gpu: [0]
+working_dir : None
+resume_path: None
+method: nerface
+
+dataset:
+  name: 'frame'
+  basedir: '/home/nas1_userB/sunghyun/Project/Sparse-Nerface/nerface_dataset/person_1'
+  H: 512
+  W: 512
+  no_ndc: True #  Do not use NDC (normalized device coordinates). Usually True for synthetic (Blender) datasets.
+  near: 0.2
+  far: 0.8
+  batch_size: 1
+  val_batch_size: 1
+  data_size: 5507 # Don't set above 1000!!
+  num_workers: 4
+
+model:
+  num_coarse: 64 # Number of depth samples per ray
+  num_fine: 64 # Number of depth samples per ray
+  lindisp: False
+  perturb: True
+  
+train_params:
+  num_iters: 1000000
+  lr: 0.0005
+  checkpoint_freq: 100000
+  num_random_rays: 2048 #64 * 2048 장당 데이터 갯수
+  chunksize: 2048
+  radiance_field_noise_std: 0.1
+
+val_params:
+  chunksize: 65536
+  radiance_field_noise_std: 0.0
+
+# TODO: change it to enable CLI
+hydra:
+  job:
+    #img_RT순서
+    id: nerface_nerface_2ndtry
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}_${hydra.job.id}
