@@ -19,12 +19,12 @@ pip install lpips
 ### Run Codes
 
 ``` Running Examples
-python train.py --config-name=nerface.yaml gpu=[0]         # nerface 
+python train.py --config-name=nerface_fulldata.yaml gpu=[0]         # nerface 
 ```
 
 ### Experiment
 
-Change ```configs/nerface.yaml```.
+Change ```configs/nerface_fulldata.yaml own ur tastes```.
 
 
 ```data_size``` : Number of images for training the model.
