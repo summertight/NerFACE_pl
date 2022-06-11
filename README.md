@@ -21,7 +21,7 @@ pip install lpips
 ``` Running Examples
 python train.py --config-name=nerface_fulldata.yaml gpu=[0]         # nerface 
 ```
-Note that nerface
+
 ### Run Codes-test
 notebooks/test_nerface_extra.ipynb
 ### Experiment
