@@ -16,12 +16,13 @@ pip install easydict
 pip install lpips
 ```
 
-### Run Codes
+### Run Codes-train
 
 ``` Running Examples
 python train.py --config-name=nerface_fulldata.yaml gpu=[0]         # nerface 
 ```
-
+### Run Codes-test
+notebooks/test_nerface_extra.ipynb
 ### Experiment
 
 Change ```configs/nerface_fulldata.yaml own ur tastes```.
