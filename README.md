@@ -47,5 +47,5 @@ outputs/2021-09-08/13-16-40_debug
 
 ## Figures from the paper
 ### Figure 1.
-
+![Alt text](./assets/Figure1.png)
 
