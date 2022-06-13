@@ -44,3 +44,6 @@ hydra:
 Output format:
 outputs/2021-09-08/13-16-40_debug
 ```
+
+### Figures from the paper
+
